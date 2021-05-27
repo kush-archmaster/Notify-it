@@ -19,10 +19,23 @@ const add_newNote = (text="") =>{
    note.classList.add('note');
    //console.log(note);  --- it will giv the div tag
 
+    //getting date for each note
+   const datestr = JSON.stringify(new Date());
+   const substring = datestr.substr(1,10);
+
+   function ReverseString(str) {
+    return str.split('-').reverse().join('-');
+ }
+   
+   const date = ReverseString(substring);
+    
    const htmlData = `
    <div class="operate">
+   <p class= "date">${date}</p>
+   <div>
    <button class="edit"> <i class="fas fa-edit"></i></button>
    <button class="delete"><i class="fas fa-trash-alt"></i></button>
+   </div>
    </div>
    <div class="main ${text ? "": "hidden"}"></div>
    <textarea class="${text ? "hidden": ""}"></textarea>
