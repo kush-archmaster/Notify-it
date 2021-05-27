@@ -211,3 +211,15 @@ button:hover .add-text {
 .hidden {  /*it will toggle between main display div and text area*/
   display: none;
 }
+
+.date{
+
+  width: 50%;
+  margin-left: 1rem;
+  margin-top: .25rem;
+  font-size: 20px;
+  
+  letter-spacing: 2px;
+  
+}
+
