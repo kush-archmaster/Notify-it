@@ -20,18 +20,12 @@ const add_newNote = (text="") =>{
    //console.log(note);  --- it will giv the div tag
 
     //getting date for each note
-   const datestr = JSON.stringify(new Date());
-   const substring = datestr.substr(1,10);
-
-   function ReverseString(str) {
-    return str.split('-').reverse().join('-');
- }
+   const dateObj = new Date().toDateString();
+   console.log(dateObj);
    
-   const date = ReverseString(substring);
-    
    const htmlData = `
    <div class="operate">
-   <p class= "date">${date}</p>
+   <p class= "date">${dateObj.slice(4,10)}, ${dateObj.slice(11)}</p>
    <div>
    <button class="edit"> <i class="fas fa-edit"></i></button>
    <button class="delete"><i class="fas fa-trash-alt"></i></button>
